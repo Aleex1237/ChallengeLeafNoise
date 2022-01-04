@@ -1,5 +1,4 @@
 const challenge = require('./Challenge');
-const process = require('process');
 
 challenge.sumaArray('1,2,10,10');
 

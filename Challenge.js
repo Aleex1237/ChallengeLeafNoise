@@ -22,13 +22,10 @@ const sumaDiagonal = (matriz) => {
 
 const piramide = (num) => {
   let arr = [];
-  if (typeof num == 'number') {
-    +num;
     for (let i = 1; i < num; i++) {
       arr.push('*');
       console.log(arr.join(' '));
     }
-  }
 };
 
 module.exports = { sumaArray, sumaDiagonal, piramide };

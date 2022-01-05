@@ -8,24 +8,32 @@ const sumaArray = (array) => {
   console.log(`La suma de los numeros pasados por parametros es: ${suma}`);
   console.log('**************************************************');
 };
+
 const sumaDiagonal = (matriz) => {
-  let suma = 0;
-  let resta = 0;
+  let sumaA = 0;
+  let sumaB = 0;
   for (let i = 0; i < matriz.length; i++) {
-    suma += matriz[i][i];
-    resta += matriz[i][2 - i];
+    sumaA += matriz[i][i];
+    sumaB += matriz[i][matriz.length - 1 - i];
   }
-  let total = suma - resta;
+  let total = sumaA - sumaB;
   console.log(`El total es: ${total}`);
   console.log('*********************************************************');
 };
 
 const piramide = (num) => {
-  let arr = [];
-    for (let i = 1; i < num; i++) {
-      arr.push('*');
-      console.log(arr.join(' '));
+  let string = '';
+  for (let i = 1; i < num; i++) {
+    for (let j = 1; j <= num - i; j++) {
+      string += ' ';
     }
-};
 
+    for (let k = 0; k < i * 2 - 1; k++) {
+      string += '#';
+    }
+    string += '\n';
+  }
+
+  console.log(string);
+};
 module.exports = { sumaArray, sumaDiagonal, piramide };

@@ -23,8 +23,8 @@ const sumaDiagonal = (matriz) => {
 
 const piramide = (num) => {
   let string = '';
-  for (let i = 1; i < num; i++) {
-    for (let j = 1; j <= num - i; j++) {
+  for (let i = 1; i < num + 1; i++) {
+    for (let j = 1; j <= num + 1 - i; j++) {
       string += ' ';
     }
 
